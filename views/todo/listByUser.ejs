@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>List</title>
+    </head>
+    <body>
+        <h3>DAFTAR KEGIATAN</h3>
+        <h2><%= data[0].User.name%></h2>
+        <table border="2px solid black">
+            <thead>
+                <tr>
+                    <th>Nama Kegiatan</th>
+                    <th>status</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0; i < data.length; i++) {%>
+                    <tr>
+                        <td><%= data[i].kegiatan%></td>
+                        <td><%= data[i].status%></td>
+                        <td><a href="/todo/update/<%= data[i].id%>">[EDIT]</a>
+                            <a href="/todo/delete/<%= data[i].id%>">[HAPUS]</a></td>
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
+        <a href="/todo"><button>CANCEL</button></a>
+        
+        <a href="/users/logout/">[LOGOUT]</a>
+    </body>
+</html>

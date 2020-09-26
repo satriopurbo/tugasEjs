@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>form edit</title>
+    </head>
+
+    <body>
+        <form action="/todo/update/<%= hasil[0].id%>" method="post">
+        <input style="margin-bottom: 20px;" type="text" name="kegiatan" value="<%= hasil[0].kegiatan%>"><br>
+        <input type="radio" id="Sudah" name="status" value="1">
+        <label for="Sudah">Sudah</label><br>
+        <input type="radio" id="Belum" name="status" value="0">
+        <label for="Belum">Belum</label><br>
+        <input style="margin-top: 50px;" type="submit" value="Simpan">
+        
+        </form>
+    </body>
+
+    <a href="/todo"><button>CANCEL</button></a>
+</html>

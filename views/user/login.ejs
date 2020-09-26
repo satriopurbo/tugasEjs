@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>form Login</title>
+    </head>
+
+    <body>
+        <% if(pesan){%>
+            <h3><%= pesan%></h3>
+            <%}%>
+        
+        <form action="/users/login" method="POST">
+        <input type="text" name="name" placeholder="masukkan username">
+        <input type="password" name ="password" placeholder="masukkan password">
+        <input type="submit" value="Simpan">
+       
+        </form>
+    </body>
+</html>

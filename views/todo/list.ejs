@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>List</title>
+    </head>
+    <body>
+        <table border="2px solid black">
+            <thead>
+                <tr>
+                    <th>Nama Kegiatan</th>
+                    <th>status</th>
+                    <th>User</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0; i < data.length; i++) {%>
+                    <tr>
+                        <td><%= data[i].kegiatan%></td>
+                        <td><%= data[i].status%></td>
+                        <td><%= data[i].User.name%></td>
+                        
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
+
+        <a href="/users/logout/">[LOGOUT]</a>
+        <a href="/todo/create/">[TAMBAH]</a>
+        <br><br><br><br><br><br>
+
+        <a href="/todo/<%= profil%>">[Profil]</a>
+    </body>
+</html>
