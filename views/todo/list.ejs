@@ -1,33 +1,74 @@
 <html>
-    <head>
-        <title>List</title>
-    </head>
-    <body>
-        <table border="2px solid black">
-            <thead>
-                <tr>
-                    <th>Nama Kegiatan</th>
-                    <th>status</th>
-                    <th>User</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <% for(let i=0; i < data.length; i++) {%>
-                    <tr>
-                        <td><%= data[i].kegiatan%></td>
-                        <td><%= data[i].status%></td>
-                        <td><%= data[i].User.name%></td>
-                        
-                    </tr>
-                <%}%>
-            </tbody>
-        </table>
 
-        <a href="/users/logout/">[LOGOUT]</a>
-        <a href="/todo/create/">[TAMBAH]</a>
-        <br><br><br><br><br><br>
+<head>
+    <title>Halaman list</title>
+    <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/css/css/bootstrap.css">
+</head>
 
-        <a href="/todo/<%= profil%>">[Profil]</a>
-    </body>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="header">
+                    <div class="profile">
+                        <button class="tombolprofil"><a href="/todo/<%= profil%>"
+                                style="color: black;">Profile</a></button>
+                    </div>
+                    <h1 class="text" style="color: black;">To Do List Assesment</h1>
+                    <div class="profile">
+                        <button class="tombolprofil"><a href="/users/logout/" style="color: black;">Log Out</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tablespace">
+                    <table class="table table-bordered table-hover">
+                        <button type="button" class="btn btn-success"><a href="/todo/create/"
+                                style="color: white;">Tambah Kegiatan</a></button>
+                        <thead>
+                            <tr>
+                                <th>Kegiatan</th>
+                                <th>Status</th>
+                                <th>Nama</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(let i=0; i < data.length; i++) {%>
+                            <tr>
+                                <td><%= data[i].kegiatan%></td>
+                                <td><%= data[i].status%></td>
+                                <td><%= data[i].User.name%></td>
+                            </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+
 </html>

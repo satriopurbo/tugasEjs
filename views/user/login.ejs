@@ -1,18 +1,55 @@
-<html>
+<hmtl>
+
     <head>
-        <title>form Login</title>
+        <title>Tugas Kelompok</title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
 
     <body>
         <% if(pesan){%>
-            <h3><%= pesan%></h3>
-            <%}%>
-        
-        <form action="/users/login" method="POST">
-        <input type="text" name="name" placeholder="masukkan username">
-        <input type="password" name ="password" placeholder="masukkan password">
-        <input type="submit" value="Simpan">
-       
-        </form>
+        <h3><%= pesan%></h3>
+        <%}%>
+        <div class="section">
+            <div class="container">
+                <div class="innercontainer">
+                    <div class="loginbox">
+                        <div>
+                            <img src="/images.png" class="avatar">
+                            <br>
+                            <h1>Login :</h1>
+                        </div>
+                        <div class="box">
+                            <form action="/users/login" method="POST">
+                            <h3>Username :</h3>
+                            <br>
+                            <input class="input" type="text" name="name" placeholder="Enter Username"
+                                style="margin-bottom: 5px;">
+                            <h3 style="margin-top: 5px;">Password :</h3>
+                            <br>
+                            <input class="input" type="Password" name="password" placeholder="Enter Password">
+                            <div class="forgotpassword">
+                                <a href="#" style="text-decoration: none; color: white; margin-top: 10px; margin-bottom: 10px;">Forgot Password</a>
+                            </div>
+                            <div class="buttoncontainer">
+                                <button type="submit">Login</button>
+                            </div>
+                            <div class="signup">
+                                <a href="/users/register" style="text-decoration: none; color: white;">Sign Up</a>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
     </body>
-</html>
+        <% if (pesan) {%>
+        <script>
+            alert('<%=pesan%>')
+        </script>
+
+        <%}%>
+</hmtl>

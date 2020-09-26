@@ -1,31 +1,71 @@
 <html>
-    <head>
-        <title>List</title>
-    </head>
-    <body>
-        <h3>DAFTAR KEGIATAN</h3>
-        <h2><%= data[0].User.name%></h2>
-        <table border="2px solid black">
-            <thead>
-                <tr>
-                    <th>Nama Kegiatan</th>
-                    <th>status</th>
-                    <th>Options</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% for(let i=0; i < data.length; i++) {%>
-                    <tr>
-                        <td><%= data[i].kegiatan%></td>
-                        <td><%= data[i].status%></td>
-                        <td><a href="/todo/update/<%= data[i].id%>">[EDIT]</a>
-                            <a href="/todo/delete/<%= data[i].id%>">[HAPUS]</a></td>
-                    </tr>
-                <%}%>
-            </tbody>
-        </table>
-        <a href="/todo"><button>CANCEL</button></a>
-        
-        <a href="/users/logout/">[LOGOUT]</a>
-    </body>
+
+<head>
+    <title>Halaman Profile</title>
+    <link rel="stylesheet" href="/css/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/user.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="header">
+                    <h1 style="margin-top: 40px; margin-left: 12px; color: black;">Halo, <%= data[0].User.name%>!</h1>
+                    <h1 class="text" style="color: black;">User Dashboard</h1>
+                    <button class="tombolheader"><a href="/todo/" style="color: black;">List</a></button>
+                    <button class="tombolheader"><a href="/users/logout/" style="color: black;">Log Out</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tablespace">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Kegiatan</th>
+                                <th>Status</th>
+                                <th>Opsi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(let i=0; i < data.length; i++) {%>
+                            <tr>
+                                <td><%= data[i].kegiatan%></td>
+                                <td><%= data[i].status%></td>
+                                <td><a href="/todo/update/<%= data[i].id%>"><button type="button"
+                                            class="btn btn-info">Edit</button></a>
+                                    <a href="/todo/delete/<%= data[i].id%>"><button type="button"
+                                            class="btn btn-danger">Hapus</button></a></td>
+                            </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+
 </html>

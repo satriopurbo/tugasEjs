@@ -1,15 +1,43 @@
 <html>
-    <head>
-        <title>form registrasi</title>
-    </head>
 
-    <body>
-        <form action="/users/register" method="POST">
-        <input type="text" name="name" placeholder="masukkan username">
-        <input type="password" name ="password" placeholder="masukkan password">
-        <input type="text" name = "email" placeholder="masukkan email">
-        <input type="submit" value="Simpan">
-        
-        </form>
-    </body>
+<head>
+
+    <head>
+        <title>
+            Register Page
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/register.css">
+    </head>
+</head>
+
+<body>
+    <div class="spacecontainer">
+        <div class="leftbox">
+            <div class="registerbox">
+                <form action="/users/register" method="POST">
+                <h1>Register</h1>
+                <br>
+                    <div class="username">
+                        <h2>Enter Username</h2>
+                    </div>
+                    <input class="input" type="text" name="name" placeholder="Enter Username">
+                    <div class="password">
+                        <h2>Enter Password</h2>
+                    </div>
+                    <input class="input" style="margin-top: 130px;" type="password" name="password"
+                        placeholder="Enter Password">
+                    <div class="email">
+                        <h2>Enter Email</h2>
+                    </div>
+                    <input class="input" style="margin-top: 260px;"type="text" name="email" placeholder="Enter Email">
+                    <div class="button">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
