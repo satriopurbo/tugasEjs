@@ -6,10 +6,15 @@
     <body>
         <form action="/todo/create" method="POST">
         <input type="text" name="kegiatan" placeholder="masukkan kegiatan">
-        <input type="number" name ="status" placeholder="masukkan 0/1(belum,sudah)">
+        
+        <h3 style="margin-top: 30px;">Sudah Dilakukan?</h3>
+        <input type="radio" id="Sudah" name="status" value="1">
+        <label for="Sudah">Sudah</label><br>
+        <input type="radio" id="Belum" name="status" value="0">
+        <label for="Belum">Belum</label><br>
         <input type="submit" value="Simpan">
         
         </form>
-        <a href="/todo"><button>CANCEL</button></a>
+        <a href="/todo"><button> << Back to List</button></a>
     </body>
 </html>

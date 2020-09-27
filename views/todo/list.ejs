@@ -56,7 +56,7 @@
                             <% for(let i=0; i < data.length; i++) {%>
                             <tr>
                                 <td><%= data[i].kegiatan%></td>
-                                <td><%= data[i].status%></td>
+                                <td><%= data[i].status==0? 'Belum': 'Sudah'%></td>
                                 <td><%= data[i].User.name%></td>
                             </tr>
                             <%}%>
