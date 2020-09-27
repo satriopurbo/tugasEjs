@@ -19,6 +19,10 @@ body {
     display: flex;
 }
 
+.container-fluid .row .col-md-12 .header .logo {
+    margin-left: 20px;
+}
+
 .container-fluid .row .col-md-12 .header h1 {
     margin: auto;
     color: black;

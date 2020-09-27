@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/css/list.css">
     <link rel="stylesheet" href="/css/css/bootstrap.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -13,14 +13,18 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="header">
-                    <div class="profile">
-                        <a href="/todo/<%= profil%>"
-                            style="color: black;"><button class="tombolprofil"><i class="fa fa-user fa-4x" aria-hidden="true"></i>
-                            </button></a>
+                    <div class="logo">
+                        <img src="/fosanlogo.png" height="120px">
                     </div>
                     <h1 class="text" style="color: black;">To Do List Assesment</h1>
                     <div class="profile">
-                        <a href="/users/logout/" style="color: black;"><button class="tombolprofil"><i class="fa fa-power-off" aria-hidden="true"></i><br>Log Out</button></a>
+                        <a href="/todo/<%= profil%>" style="color: black;"><button class="tombolprofil"><i
+                                    class="fa fa-user fa-2x" aria-hidden="true"></i><br> Profil
+                            </button></a>
+                    </div>
+                    <div class="profile">
+                        <a href="/users/logout/" style="color: black;"><button class="tombolprofil"><i
+                                    class="fa fa-power-off fa-2x" aria-hidden="true"></i><br>Log Out</button></a>
                     </div>
                 </div>
             </div>
@@ -36,7 +40,9 @@
 
             </div>
             <div class="col-md-2">
-
+                <a href="/todo/create/" style="color: white;"><button type="button" class="btn btn-success"><i
+                            class="fa fa-plus-square fa-lg" aria-hidden="true"></i>
+                    </button></a>
             </div>
         </div>
     </div>
@@ -46,9 +52,6 @@
             <div class="col-md-12">
                 <div class="tablespace">
                     <table class="table table-bordered table-hover">
-                        <a href="/todo/create/"
-                                style="color: white;"><button type="button" class="btn btn-success"><i class="fa fa-plus-square fa-lg" aria-hidden="true"></i>
-                                </button></a>
                         <thead>
                             <tr>
                                 <th>Kegiatan</th>

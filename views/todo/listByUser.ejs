@@ -13,12 +13,16 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="header">
-                    <img src="/fosanlogo.png" width="100px">
+                    <div class="logo">
+                        <img src="/fosanlogo.png" height="120px">
+                    </div>
                     <h1 class="text" style="color: black;"><%= data[0].User.name%>'s Dashboard</h1>
-                    <a href="/todo/" style="color: black;"><button class="tombolheader"><i class="fa fa-backward" aria-hidden="true"></i><br>
-                        Kembali</button></a>
-                    <a href="/users/logout/" style="color: black;"><button class="tombolheader"><i class="fa fa-power-off" aria-hidden="true"></i><br>
-                        Log Out</button></a>
+                    <a href="/todo/" style="color: black;"><button class="tombolheader"><i class="fa fa-backward fa-2x"
+                                aria-hidden="true"></i><br>
+                            Kembali</button></a>
+                    <a href="/users/logout/" style="color: black;"><button class="tombolheader"><i
+                                class="fa fa-power-off fa-2x" aria-hidden="true"></i><br>
+                            Log Out</button></a>
                 </div>
             </div>
         </div>
@@ -48,7 +52,7 @@
                                 <th style="text-align: center; width: 600px;">Kegiatan</th>
                                 <th style="text-align: center; width: 100px;">Status</th>
                                 <th style="text-align: center; width: 200px;">Opsi </th>
-                            </tr>   
+                            </tr>
                         </thead>
                         <tbody>
                             <% for(let i=0; i < data.length; i++) {%>

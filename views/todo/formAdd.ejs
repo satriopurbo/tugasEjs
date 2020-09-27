@@ -4,7 +4,17 @@
     <title>form registrasi</title>
     <link rel="stylesheet" href="/css/add.css">
     <link rel="stylesheet" href="/css/css/bootstrap.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script>
+        function validateForm() {
+            var x = document.forms["add"]["kegiatan"].value;
+            if (x == "" || x == null) {
+                alert("Nama kegiatan harus di isi BOS...!!!");
+                return false;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -12,11 +22,16 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="header">
-                    <img src="/fosanlogo.png" width="100px">
-                    <h1>Ubah Kegiatan</h1>
-                    <a href="/todo"><button class="tombolheader">
+                    <div class="logo">
+                        <img src="/fosanlogo.png" height="120px">
+                    </div>
+                    <h1>Tambah Kegiatan</h1>
+                    <a href="/todo"><button class="tombolheader"><i class="fa fa-backward fa-2x"
+                                aria-hidden="true"></i><br>
                             Kembali</button></a>
-                    <a href="/users/logout/"><button class="tombolheader">Log Out</button></a>
+                    <a href="/users/logout/"><button class="tombolheader"><i class="fa fa-power-off fa-2x"
+                                aria-hidden="true"></i><br>
+                            Log Out</button></a>
                 </div>
             </div>
         </div>
@@ -40,7 +55,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="tablespace">
-                    <form action="/todo/create" method="POST">
+                    <form name="add" action="/todo/create" onsubmit="return validateForm()" method="POST">
                         <input class="input" type="text" name="kegiatan" placeholder="masukkan kegiatan">
                         <br>
                         <br>

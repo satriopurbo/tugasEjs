@@ -19,6 +19,10 @@ body {
     display: flex;
 }
 
+.container-fluid .row .col-md-12 .header .logo {
+    margin-left: 20px;
+}
+
 .container-fluid .row .col-md-12 .header .user {
     flex-direction: column;
     margin-left: 24px;
@@ -39,6 +43,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     background-color: transparent;
+    margin-right: 5px;
 }
 
 .container .row .col-md-2 {
