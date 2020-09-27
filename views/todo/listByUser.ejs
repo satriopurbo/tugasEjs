@@ -4,6 +4,8 @@
     <title>Halaman Profile</title>
     <link rel="stylesheet" href="/css/css/bootstrap.css">
     <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -11,10 +13,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="header">
-                    <h1 style="margin-top: 40px; margin-left: 12px; color: black;">Halo, <%= data[0].User.name%>!</h1>
-                    <h1 class="text" style="color: black;">User Dashboard</h1>
-                    <button class="tombolheader"><a href="/todo/" style="color: black;">List</a></button>
-                    <button class="tombolheader"><a href="/users/logout/" style="color: black;">Log Out</a></button>
+                    <img src="/fosanlogo.png" width="100px">
+                    <h1 class="text" style="color: black;"><%= data[0].User.name%>'s Dashboard</h1>
+                    <a href="/todo/" style="color: black;"><button class="tombolheader"><i class="fa fa-backward" aria-hidden="true"></i><br>
+                        Kembali</button></a>
+                    <a href="/users/logout/" style="color: black;"><button class="tombolheader"><i class="fa fa-power-off" aria-hidden="true"></i><br>
+                        Log Out</button></a>
                 </div>
             </div>
         </div>
@@ -41,20 +45,23 @@
                     <table class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>Kegiatan</th>
-                                <th>Status</th>
-                                <th>Opsi</th>
-                            </tr>
+                                <th style="text-align: center; width: 600px;">Kegiatan</th>
+                                <th style="text-align: center; width: 100px;">Status</th>
+                                <th style="text-align: center; width: 200px;">Opsi </th>
+                            </tr>   
                         </thead>
                         <tbody>
                             <% for(let i=0; i < data.length; i++) {%>
                             <tr>
                                 <td><%= data[i].kegiatan%></td>
-                                <td><%= data[i].status%></td>
+                                <td><%= data[i].status == 0? 'Belum' : 'Sudah'%></td>
                                 <td><a href="/todo/update/<%= data[i].id%>"><button type="button"
-                                            class="btn btn-info">Edit</button></a>
+                                            class="btn btn-primary"><i class="fa fa-pencil-square-o fa-lg"
+                                                aria-hidden="true"></i>
+                                        </button></a>
                                     <a href="/todo/delete/<%= data[i].id%>"><button type="button"
-                                            class="btn btn-danger">Hapus</button></a></td>
+                                            class="btn btn-danger"><i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                                        </button></a></td>
                             </tr>
                             <%}%>
                         </tbody>

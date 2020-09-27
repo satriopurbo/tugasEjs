@@ -19,16 +19,11 @@ body {
     display: flex;
 }
 
-.container-fluid .row .col-md-12 .header .user {
-    flex-direction: column;
-    margin-left: 24px;
-}
-
-.container-fluid .row .col-md-12 .header .text {
-    font-size: 4rem;
+.container-fluid .row .col-md-12 .header h1 {
+    margin: auto;
+    color: black;
     font-weight: bold;
-    margin: auto; 
-    text-align: center;   
+    text-align: center;
 }
 
 .container-fluid .row .col-md-12 .tombolheader {
@@ -46,22 +41,35 @@ body {
 }
 
 .container .row .col-md-12 .tablespace {
-    height: 350px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 24px;
+    height: 300px;
     display: flex;
-    overflow: scroll;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .row .col-md-12 .tablespace .input {
+    left: 80px;
+    height: 50px;
+    width: 1000px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
+    font-size: 2rem;
+}
+
+.container .row .col-md-12 .tablespace .button {
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.container .row .col-md-12 .tablespace .table {
-    background-color: white;
-    margin-top: 25px;
-    text-align: center;
-}
-
-.container .row .col-md-12 .tablespace .table .btn {
+.container .row .col-md-12 .tablespace .button .btn {
     width: 120px;
-    font-size: 1.5rem;
-    height: 38px;    
+    margin: auto;
+    font-size: 1.7rem;
 }

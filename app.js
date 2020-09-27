@@ -18,7 +18,7 @@ app.use(session({
 
 app.use('/', routing)
 
-const port = 3000;
+const port = 3001;
 app.listen(port,()=>{
     console.log(`tersambung ke port ${port}`)
 })

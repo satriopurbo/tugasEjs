@@ -4,6 +4,8 @@
     <title>Halaman list</title>
     <link rel="stylesheet" href="/css/list.css">
     <link rel="stylesheet" href="/css/css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -12,12 +14,13 @@
             <div class="col-md-12">
                 <div class="header">
                     <div class="profile">
-                        <button class="tombolprofil"><a href="/todo/<%= profil%>"
-                                style="color: black;">Profile</a></button>
+                        <a href="/todo/<%= profil%>"
+                            style="color: black;"><button class="tombolprofil"><i class="fa fa-user fa-4x" aria-hidden="true"></i>
+                            </button></a>
                     </div>
                     <h1 class="text" style="color: black;">To Do List Assesment</h1>
                     <div class="profile">
-                        <button class="tombolprofil"><a href="/users/logout/" style="color: black;">Log Out</a></button>
+                        <a href="/users/logout/" style="color: black;"><button class="tombolprofil"><i class="fa fa-power-off" aria-hidden="true"></i><br>Log Out</button></a>
                     </div>
                 </div>
             </div>
@@ -43,8 +46,9 @@
             <div class="col-md-12">
                 <div class="tablespace">
                     <table class="table table-bordered table-hover">
-                        <button type="button" class="btn btn-success"><a href="/todo/create/"
-                                style="color: white;">Tambah Kegiatan</a></button>
+                        <a href="/todo/create/"
+                                style="color: white;"><button type="button" class="btn btn-success"><i class="fa fa-plus-square fa-lg" aria-hidden="true"></i>
+                                </button></a>
                         <thead>
                             <tr>
                                 <th>Kegiatan</th>

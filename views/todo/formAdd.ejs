@@ -1,20 +1,68 @@
 <html>
-    <head>
-        <title>form registrasi</title>
-    </head>
 
-    <body>
-        <form action="/todo/create" method="POST">
-        <input type="text" name="kegiatan" placeholder="masukkan kegiatan">
-        
-        <h3 style="margin-top: 30px;">Sudah Dilakukan?</h3>
-        <input type="radio" id="Sudah" name="status" value="1">
-        <label for="Sudah">Sudah</label><br>
-        <input type="radio" id="Belum" name="status" value="0">
-        <label for="Belum">Belum</label><br>
-        <input type="submit" value="Simpan">
-        
-        </form>
-        <a href="/todo"><button> << Back to List</button></a>
-    </body>
+<head>
+    <title>form registrasi</title>
+    <link rel="stylesheet" href="/css/add.css">
+    <link rel="stylesheet" href="/css/css/bootstrap.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="header">
+                    <img src="/fosanlogo.png" width="100px">
+                    <h1>Ubah Kegiatan</h1>
+                    <a href="/todo"><button class="tombolheader">
+                            Kembali</button></a>
+                    <a href="/users/logout/"><button class="tombolheader">Log Out</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tablespace">
+                    <form action="/todo/create" method="POST">
+                        <input class="input" type="text" name="kegiatan" placeholder="masukkan kegiatan">
+                        <br>
+                        <br>
+                        <input type="radio" id="Sudah" name="status" value="1">
+                        <label for="Sudah">Sudah</label>
+                        <br>
+                        <input type="radio" id="Belum" name="status" value="0">
+                        <label for="Belum">Belum</label>
+                        <br>
+                        <div class="button">
+                            <button type="submit" style="width: 150px;" class="btn btn-success">Simpan</button>
+                            <a href="/todo"><button type="button" style="margin-top: 5px;"
+                                    class="btn btn-danger">Cancel</button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+
 </html>
