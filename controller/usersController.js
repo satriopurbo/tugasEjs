@@ -16,7 +16,7 @@ class Controller{
         }})
         .then(check=>{
             if(check.length){
-                res.json({message :`nama ${name} sudah terdaftar`})
+                res.render('user/register',{pesan:"USERNAME sudah Terdaftar"})
             }
             else{
                 usersModel.create({name:name,password:encryptedPassword,email:email})
@@ -31,11 +31,11 @@ class Controller{
     }
 
     static formRegister(req,res){
-        res.render('user/register')
+        res.render('user/register',{pesan : "Silahkan mengisi formulir Registrasi"})
     }
 
     static formLogin(req,res){
-        res.render('user/login.ejs',{pesan:'WELLCOME'})
+        res.render('user/login.ejs',{pesan:'WELLCOME TO FOSAN'})
     }
 
     static logout(req,res){
