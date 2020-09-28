@@ -48,9 +48,10 @@ table {
 }
 
 body {
-    background:url(../image.jpg);
+    background-color: #2b1331;
+    background-image: linear-gradient(315deg, #2b1331 0%, #b9abcf 74%);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;    
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -74,7 +75,7 @@ body {
 }
 
 .spacecontainer .leftbox .registerbox {
-    background-color:rgba(0, 0, 0, 0.7);
+    background-color:rgba(255, 255, 255, 0.55);
     width: 100%;
     display: flex;
     border-radius: 24px;
@@ -94,7 +95,7 @@ body {
 
 
 .spacecontainer .leftbox .registerbox .username {
-    color: white;
+    color: #000;
     position: absolute;
     top: 130px;
     left: 110px;
@@ -102,7 +103,7 @@ body {
 }
 
 .spacecontainer .leftbox .registerbox .password {
-    color: white;
+    color:#000;
     position: absolute;
     top: 255px;
     left: 110px;
@@ -110,7 +111,7 @@ body {
 }
 
 .spacecontainer .leftbox .registerbox .email {
-    color: white;
+    color:#000;
     position: absolute;
     top: 380px;
     left: 110px;
@@ -118,7 +119,7 @@ body {
 }
 
 .spacecontainer .leftbox .registerbox h1{
-    color: white;
+    color:#000;
     font-size: 3rem;
     margin-left: 25px;
     margin-top: 22px;
@@ -138,11 +139,11 @@ body {
 .spacecontainer .leftbox .registerbox .input[type="text"],
 input[type="password"] {
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #000;
     background: transparent;
     outline: none;
     height: 40px;
-    color: #fff;
+    color: #000;
     font-size: 16px;
 }
 
@@ -155,7 +156,7 @@ input[type="password"] {
     padding: 12.5px;
     width: 200px;
     border-radius: 20px;
-    background-color: white;
+    background-color:white;
     font-size: 1.2rem;
     font-weight: bold;
 }
