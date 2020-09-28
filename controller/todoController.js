@@ -36,14 +36,14 @@ class Controller {
     static update(req, res) {
 
         todo.update(
-            req.body
-            , {
+            req.body,
+             {
                 where: {
                     id: req.params.id
                 }
             })
             .then(response => {
-                res.redirect('/todo')
+                res.redirect(`/todo/${response[0]}`)
             })
             .catch(err => {
                 res.json('update gagal')
@@ -66,12 +66,14 @@ class Controller {
     }
 
     static formUpdate(req, res) {
+        const decode = verifyToken(req.session.token);
+        let profil = decode.id;
         todo.findAll({
             where: {
                 id: req.params.id
             }
         }).then(hasil => {
-            res.render('todo/formUpdate.ejs', { hasil })
+            res.render('todo/formUpdate.ejs', { hasil,profil })
         })
 
     }
