@@ -17,6 +17,9 @@ function authentification(req,res,next){
             }
             else{
                 res.redirect('/users/login')
+                // res.JSON({
+                //     message: "Maaf Password anda salah!"
+                // })
             }
         })
     }

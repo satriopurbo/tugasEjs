@@ -9,7 +9,7 @@ class Controller {
     static create(req, res) {
         const { kegiatan, status } = req.body
         const decode = verifyToken(req.session.token);
-        todo.create({ kegiatan: kegiatan, status: status, UserId: decode.id }, { returing: true })
+        todo.create({ kegiatan: kegiatan, status: status, UserId: decode.id }, { returning: true })
             .then(respon => {
                 res.redirect('/todo')
             })
@@ -43,7 +43,7 @@ class Controller {
                 }
             })
             .then(response => {
-                res.redirect(`/todo/${response[0]}`)
+                res.redirect(`/todo/`)
             })
             .catch(err => {
                 res.json('update gagal')

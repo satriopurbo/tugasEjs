@@ -8,6 +8,7 @@
         </title>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/register.css">
+        <link rel="icon" href="/fosanlogo.png" type="image/x-icon">
     </head>
 </head>
 
@@ -17,8 +18,8 @@
             <div class="registerbox">
                 <form action="/users/register" method="POST">
                     <img src="/fosanlogo.png" class="avatar" height="120px">
-                <h1>Register</h1>
-                <br>
+                    <h1>Register</h1>
+                    <br>
                     <div class="username">
                         <h2 style="margin-top:-5px;">Enter Username</h2>
                     </div>
@@ -31,7 +32,7 @@
                     <div class="email">
                         <h2>Enter Email</h2>
                     </div>
-                    <input class="input" style="margin-top: 260px;"type="text" name="email" placeholder="Enter Email">
+                    <input class="input" style="margin-top: 260px;" type="text" name="email" placeholder="Enter Email">
                     <div class="button">
                         <button type="submit">Sign Up</button>
                     </div>
@@ -41,9 +42,9 @@
     </div>
 </body>
 <% if (pesan) {%>
-    <script>
-        alert('<%=pesan%>')
-    </script>
+<script>
+    alert('<%=pesan%>')
+</script>
 
-    <%}%>
+<%}%>
 </html>

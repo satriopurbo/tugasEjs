@@ -57,17 +57,30 @@ class Controller{
                 if(hasil){
                     let token = generateToken(data[0].dataValues);
                     req.session.token= token;
-                    res.redirect('/todo')
+                    // res.redirect('/todo')
+                    res.json({
+                        pesan : "sukses"
+                    })
                 }
                 else{
-                    res.render('user/login.ejs',{pesan:"PASSWORD SALAH"});
+                    res.json(
+                        {
+                            pesan:"salahpass"
+                        });
                 }
             }
-            res.render('user/login.ejs',{pesan:"USERNAME SALAH"});
+            res.json(
+                {
+                    pesan:"salahuser"
+                });
         })
         .catch(err=>{
             res.json({message : err})
         })
+    }
+
+    static landingPage(req, res){
+        res.render('user/landingPage.ejs')
     }
 
 
